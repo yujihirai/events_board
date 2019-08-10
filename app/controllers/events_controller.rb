@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
 
   def index
+    @events = Event.all
   end
 
   def new
@@ -18,9 +19,13 @@ class EventsController < ApplicationController
     end
   end
 
+  def show
+    @event = Event.find(params[:id])
+  end
+
   private
 
   def event_params
-    params.require(:event).permit(:title, :description, :start_date, :end_date, :vnue, :location)
+    params.require(:event).permit(:title, :description, :start_date, :end_date, :venue, :location)
   end
 end
