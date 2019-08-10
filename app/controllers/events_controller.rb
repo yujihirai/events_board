@@ -15,12 +15,28 @@ class EventsController < ApplicationController
       redirect_to @event
     else
       flash.now[:alert] = "Event not created"
-      render 'new'
+      render "new"
     end
   end
 
   def show
     @event = Event.find(params[:id])
+  end
+
+  def edit
+    @event = Event.find(params[:id])
+  end
+
+  def update
+    @event = Event.find(params[:id])
+
+    if @event.update(event_params)
+      flash[:notice] = "Event updated!"
+      redirect_to @event
+    else
+      flash.now[:alert] = "Event not updated!"
+      render "edit"
+    end
   end
 
   private
