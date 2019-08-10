@@ -10,33 +10,34 @@
   <div class="col-sm-3 pull-right">
     <div class="sidebar">
       <h3 class="discover">Discover</h3>
-        <ul class="nav nav-pills nav-stacked">
-          <li class="<%= "active" if current_page?("/events") %>"><%= link_to "ALL EVENTS", events_path %></li>
-        </ul>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="<%= "active" if current_page?("/events") %>"><%= link_to "ALL EVENTS", events_path %></li>
+      </ul>
     </div>
   </div>
-</div>
 
-<div class="col-sm-9">
-  <h3>Discover and register to attend your favorite events right here</h3>
-</div>
-<% @events.each do |event| %>
-  <div class="col-sm-9 pull-left">
-    <%= link_to event_path(event) do %>
-      <div class="events">
-        <div class="row">
-          <div class="col-sm-3">
-            <%= image_tag "https://placehold.jp/200x100.png" %>
-          </div>
-          <div class="col-sm-9">
-            <h3 class="event-title"><%= event.title %></h3>
-            <p class="lead-time">
-              <span class="event-start"><%= time_format(event.start_date) %></span>
-              <span class="pull-right">Organized by:</span>
-            </p>
+
+  <div class="col-sm-9">
+    <h3>Discover and register to attend your favorite events right here</h3>
+  </div>
+  <% @events.each do |event| %>
+    <div class="col-sm-9 pull-left">
+      <%= link_to event_path(event) do %>
+        <div class="events">
+          <div class="row">
+            <div class="col-sm-3">
+              <%= image_tag "https://placehold.jp/200x100.png" %>
+            </div>
+            <div class="col-sm-9">
+              <h3 class="event-title"><%= event.title %></h3>
+              <p class="lead-time">
+                <span class="event-start"><%= time_format(event.start_date) %></span>
+                <span class="pull-right">Organized by:</span>
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    <% end %>
-  </div>
-<% end %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
