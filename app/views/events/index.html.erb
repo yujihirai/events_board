@@ -5,7 +5,7 @@
 <% @events.each do |event| %>
   <div>
     <h4><%= link_to event.title, event_path(event) %></h4>
-    <p><%= time_format(event.start_date) %></p>
+    <p><%= time_format(event.start_date) %> <%= fa_icon "camera-retro" %></p>
     <p><%= time_format(event.end_date) %></p>
     <p><%= event.venue %>, <%= event.location %></p>
   </div>

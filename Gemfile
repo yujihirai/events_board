@@ -15,6 +15,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'better_errors', '~> 2.5'
 gem "binding_of_caller"
 gem 'awesome_print', '~> 1.8'
+gem 'bootstrap-sass', '~> 3.4'
+gem 'jquery-rails'
+gem 'font-awesome-rails', '~> 4.7'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
