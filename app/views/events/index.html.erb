@@ -33,7 +33,7 @@
               <p><span class="event-venue"><%= event.venue %> - <strong><%= event.location %></strong></span></p>
               <p class="lead-time">
                 <span class="event-start"><%= time_format(event.start_date) %></span>
-                <span class="pull-right">Organized by:</span>
+                <span class="pull-right">Organized by: <%= event.organizer %></span>
               </p>
             </div>
           </div>
