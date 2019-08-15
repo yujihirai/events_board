@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
 
+# Rails Default Gems
 gem 'rails', '~> 5.2.3'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
@@ -12,6 +13,8 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
+
+# Essential Gems for Project
 gem 'better_errors', '~> 2.5'
 gem "binding_of_caller"
 gem 'awesome_print', '~> 1.8'
@@ -21,6 +24,14 @@ gem 'font-awesome-rails', '~> 4.7'
 gem 'simple_form', '~> 4.1'
 gem "bootstrap_form", ">= 4.2.0"
 gem 'devise', '~> 4.6'
+gem 'pundit', '~> 2.1'
+gem 'friendly_id', '~> 5.2'
+gem 'carrierwave', '~> 1.3'
+gem 'fog', '~> 2.2'
+gem 'mini_magick', '~> 4.9'
+gem 'searchkick', '~> 4.1'
+gem 'will_paginate', '~> 3.1'
+gem 'bootstrap-will_paginate', '~> 1.0'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
