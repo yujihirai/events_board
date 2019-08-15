@@ -9,7 +9,7 @@ module ApplicationHelper
   end
 
   def time_format(event_date)
-    event_date.strftime("%Y-%m-%d %H:%M")
+    event_date.strftime("%Y-%m-%d %H:%M (#{%w(日 月 火 水 木 金 土)[Time.now.wday]})")
   end
 
   def event_status(event)
