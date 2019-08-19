@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :events do
     resources :comments, only: [:create]
+    resources :attendances, only: [:create]
   end
   resources :users, only: [:show]
   resources :categories, only: [:show]
