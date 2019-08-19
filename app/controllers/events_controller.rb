@@ -5,6 +5,7 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.all.order('created_at DESC')
+    @categories = Category.order(:name)
     authorize @events, :index?
   end
 
