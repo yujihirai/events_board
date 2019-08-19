@@ -4,7 +4,11 @@ class EventsController < ApplicationController
   # before_action :authorize_owner!, only: [:edit, :update, :destroy]
 
   def index
-    @events = Event.all.order('created_at DESC')
+    if params[:query].present?
+      @events = Event.search(params[:query])
+    else
+      @events = Event.all.order('created_at DESC')
+    end
     @categories = Category.order(:name)
     authorize @events, :index?
   end
