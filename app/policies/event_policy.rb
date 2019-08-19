@@ -26,11 +26,11 @@ class EventPolicy < ApplicationPolicy
   end
 
   def update?
-    user.present? && user == event.organizer || user.try(:admin?)
+    (user.present? && user == event.organizer) || user.try(:admin?)
   end
 
   def destroy?
-    user.present? && user == event.organizer || user.try(:admin?)
+    (user.present? && user == event.organizer) || user.try(:admin?)
   end
 
   private

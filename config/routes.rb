@@ -5,8 +5,11 @@ Rails.application.routes.draw do
     resources :categories, only: [:index, :new, :create, :edit, :update, :destroy]
   end
   devise_for :users
-  resources :events
+  resources :events do
+    resources :comments, only: [:create]
+  end
   resources :users, only: [:show]
   resources :categories, only: [:show]
+
   root 'events#index'
 end

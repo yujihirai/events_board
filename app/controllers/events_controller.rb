@@ -15,12 +15,12 @@ class EventsController < ApplicationController
 
   def new
     @event = Event.new
-
     authorize @event, :new?
   end
 
   def create
     @event = Event.new(event_params)
+    authorize @event, :create?
     @event.organizer = current_user
     if @event.save
       flash[:notice] = 'Event created!'
@@ -33,6 +33,8 @@ class EventsController < ApplicationController
 
   def show
     authorize @event, :show?
+    @comment = Comment.new
+    @comment.event_id = @event.id
   end
 
   def edit
