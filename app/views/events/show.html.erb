@@ -12,7 +12,7 @@
 
 <div class="row">
   <div class="col-sm-9">
-    <%= image_tag "https://picsum.photos/1000/500/?random", class: "event-image" %>
+    <%= image_tag @event.image.url, class: "event-image" %>
 
     <div class="event-meta">
       <h4><span class="event-start"><strong>Starts: <%= time_format(@event.start_date) %></strong></span></h4>
