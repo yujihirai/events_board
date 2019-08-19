@@ -19,6 +19,8 @@
 
       <%= f.collection_select :category_id, Category.all, :id, :name, label: "Select Category", prompt: true %>
 
+      <%= f.number_field :seats, label: "Capacity", help: "The number of attendees to the event" %>
+
       <%= f.file_field :image, label: "Upload Event Image" %>
 
       <%= f.submit class: "btn btn-primary" %>
