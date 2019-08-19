@@ -17,6 +17,8 @@
 
       <%= f.text_field :location %>
 
+      <%= f.collection_select :category_id, Category.all, :id, :name, label: "Select Category", prompt: true %>
+
       <%= f.file_field :image, label: "Upload Event Image" %>
 
       <%= f.submit class: "btn btn-primary" %>
