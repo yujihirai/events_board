@@ -21,6 +21,8 @@
 
       <%= f.number_field :seats, label: "Capacity", help: "The number of attendees to the event" %>
 
+      <%= f.text_field :tag_list, label: "Tags", help: "Please enter comma separated words only" %>
+
       <%= f.file_field :image, label: "Upload Event Image" %>
 
       <%= f.submit class: "btn btn-primary" %>

@@ -54,6 +54,9 @@
     <hr>
     <div class="sidebar">
       <h4 class="tags">Tags</h4>
+      <% if @event.tags.any? %>
+        <%= render @event.tags %>
+      <% end %>
     </div>
     <hr>
     <div class="sidebar">
