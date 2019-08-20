@@ -65,6 +65,13 @@
     <hr>
     <div class="sidebar">
       <h4 class="likes">Likes</h4>
+      <%= link_to event_likes_path(@event, like: "like"), method: :post do %>
+      <span id="like"><%= @event.likes_total %></span>
+      <% end %>&nbsp;&nbsp;&nbsp;&nbsp;
+      <%= link_to event_likes_path(@event, like: "dislike"), method: :post do %>
+      <span id="dislike"><%= @event.dislikes_total %></span>
+      <% end %>
+
     </div>
   </div>
 </div>

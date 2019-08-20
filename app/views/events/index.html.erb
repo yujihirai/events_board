@@ -56,6 +56,11 @@
                 <span class="event-start"><%= time_format(event.start_date) %></span>
                 <span class="pull-right">Organized by: <%= event.organizer %></span>
               </p>
+              <p class="index-icons">
+                <span><%= fa_icon "comments" %><%= event.comments.count %></span>
+                <span><%= fa_icon "thumbs-o-up" %><%= event.likes_total %></span>
+                <span><%= fa_icon "thumbs-o-down" %><%= event.dislikes_total %></span>
+              </p>
             </div>
           </div>
         </div>
