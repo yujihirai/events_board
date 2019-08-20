@@ -8,6 +8,7 @@ class Admin::ApplicationController < ApplicationController
     @comments = Comment.all
     @attendances = Attendance.all
     @likes = Like.all
+    @tags = Tag.all
   end
 
   private
