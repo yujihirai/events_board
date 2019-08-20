@@ -7,6 +7,7 @@ class Admin::ApplicationController < ApplicationController
     @categories = Category.all
     @comments = Comment.all
     @attendances = Attendance.all
+    @likes = Like.all
   end
 
   private
