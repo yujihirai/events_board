@@ -32,6 +32,7 @@ gem 'mini_magick', '~> 4.9'
 gem 'searchkick', '~> 4.1'
 gem 'will_paginate', '~> 3.1'
 gem 'bootstrap-will_paginate', '~> 1.0'
+gem 'gravtastic'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

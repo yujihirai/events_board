@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  include Gravtastic
+  gravtastic
   extend FriendlyId
   friendly_id :username
 
