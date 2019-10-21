@@ -23,7 +23,7 @@ gem 'jquery-rails'
 gem 'font-awesome-rails', '~> 4.7'
 gem 'simple_form', '~> 4.1'
 gem "bootstrap_form", ">= 4.2.0"
-gem 'devise', '~> 4.6'
+gem 'devise', '~> 4.7'
 gem 'pundit', '~> 2.1'
 gem 'friendly_id', '~> 5.2'
 gem 'carrierwave', '~> 1.3'
