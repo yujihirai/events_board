@@ -21,7 +21,7 @@ gem 'awesome_print', '~> 1.8'
 gem 'bootstrap-sass', '~> 3.4'
 gem 'jquery-rails'
 gem 'font-awesome-rails', '~> 4.7'
-gem 'simple_form', '~> 4.1'
+gem 'simple_form', '~> 5.0'
 gem "bootstrap_form", ">= 4.2.0"
 gem 'devise', '~> 4.7'
 gem 'pundit', '~> 2.1'
